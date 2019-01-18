@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Volumes/Data/AndroidProject/Mentions/mentions/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5d34e836154eafba131fbb1b14e5f6fd08c756e7">
+        <dex dex="/Volumes/Data/AndroidProject/Mentions/sample/build/intermediates/pre-dexed/debug/classes_df08cf668ea004f33417975be623bba4d8d4c6f6.jar" />
+    </item>
+
+</items>

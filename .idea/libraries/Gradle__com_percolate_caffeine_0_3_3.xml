@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.percolate:caffeine-0.3.3">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/3f1fb4cd95c2085b5f989eac381374c7114db753/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/3f1fb4cd95c2085b5f989eac381374c7114db753/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.percolate/caffeine/0.3.3/f67e937c2b2bd25b7730be9b244ed1a475f381f4/caffeine-0.3.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
