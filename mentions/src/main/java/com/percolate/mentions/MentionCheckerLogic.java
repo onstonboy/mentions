@@ -79,22 +79,24 @@ class MentionCheckerLogic {
 
     Boolean isMention() {
         // perform a search if the {@link EditText} has an '@' symbol.
-        if (StringUtils.contains(editText.getText(), "@")) {
-            final int cursorPosition = editText.getSelectionStart();
-            final String allTextBeforeCursor =
-                    editText.getText().toString().substring(0, cursorPosition);
-            final int atSymbolPosition = StringUtils.lastIndexOf(allTextBeforeCursor, "@");
-            final String allTextAfterAtSymbol = editText.getText()
-                    .toString()
-                    .substring(atSymbolPosition, editText.getText().length());
-            final String providedSearchText =
-                    StringUtils.substringAfterLast(allTextBeforeCursor, "@");
-            // check if search text is first in the view or has a space beforehand if there are
-            // more characters in the view.
-            return (atSymbolPosition == 0 || spaceBeforeAtSymbol(allTextBeforeCursor,
-                    atSymbolPosition))
-                    && !spaceAfterAtSymbol(allTextAfterAtSymbol)
-                    && searchLimitMaxChars(providedSearchText, maxCharacters);
+        try {
+            if (StringUtils.contains(editText.getText(), "@")) {
+                final int cursorPosition = editText.getSelectionStart();
+                final String allTextBeforeCursor =
+                        editText.getText().toString().substring(0, cursorPosition);
+                final int atSymbolPosition = StringUtils.lastIndexOf(allTextBeforeCursor, "@");
+                final String allTextAfterAtSymbol = editText.getText()
+                        .toString()
+                        .substring(atSymbolPosition, editText.getText().length());
+                final String providedSearchText =
+                        StringUtils.substringAfterLast(allTextBeforeCursor, "@");
+                // check if search text is first in the view or has a space beforehand if there are
+                // more characters in the view.
+                return (atSymbolPosition == 0 || spaceBeforeAtSymbol(allTextBeforeCursor,
+                        atSymbolPosition)) && !spaceAfterAtSymbol(allTextAfterAtSymbol) && searchLimitMaxChars(providedSearchText, maxCharacters);
+            }
+        } catch (IndexOutOfBoundsException iobe) {
+            return false;
         }
         return false;
     }
